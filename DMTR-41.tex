@@ -18,16 +18,21 @@ The report for the previous version can be found in \citeds{DMTR-15}.
 
 Measured using
 \href{https://github.com/lsst/validation_data_hsc}{validation\_data\_hsc},
-which consists of 8 HSC engineering images: 4 \emph{r}-band, 2
+which consists of 8 HSC engineering images: 2 \emph{r}-band, 4
 \emph{i}'-band, and 2 \emph{y}-band. Measurements were made on
 individual, separately-processed, single-frame images: Jointcal and/or
 meas\_mosaic were not run. For comparison, we provide the \SRD required
-``minimum'' value of each metric as defined in the Science Requirements
+``design'' value of each metric as defined in the Science Requirements
 Document \citedsp{LPM-17}, and, where available, the
 target for this release as defined in the Data Management Development
 Milestone Roadmap \citedsp{LDM-240}. All values
 were computed using the examples/runHscTest.sh script in the
 \href{https://github.com/lsst/validate_drp}{validate\_drp} package.
+
+Note that care must be taken to compare apples to apples.  These metrics
+have all been computed relative to the "design" specifications.  If compared
+to metrics computed relative to a different threshold, the values of the KPMs
+will be different.
 
 \section{Photometric Performance}\label{photometric-performance}
 
@@ -45,7 +50,7 @@ Metric\strut
 \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
 Unit\strut
 \end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright\strut
-SRD Requirement\strut
+SRD Requirement--Design\strut
 \end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright\strut
 Release 14 Target\strut
 \end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright\strut
@@ -103,7 +108,7 @@ mmag\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 8.0\strut
 \end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-13.97\strut
+14.08\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -116,7 +121,7 @@ mmag\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 8.0\strut
 \end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-11.8\strut
+11.90\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -181,7 +186,7 @@ PF1 (\emph{r} band)\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 10.0\strut
 \end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-30.39\strut
+30.60\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -259,7 +264,7 @@ mmag\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 22.5\strut
 \end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-26.65\strut
+26.74\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -272,7 +277,7 @@ mmag\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 22.5\strut
 \end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-25.12\strut
+25.01\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -336,7 +341,7 @@ mas\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 30.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-6.2\strut
+6.27\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AM1 (\emph{i}-band)\strut
@@ -347,29 +352,29 @@ mas\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 30.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-10.01\strut
+10.80\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AF1 (\emph{r}-band)\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
 \%\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
-\(\leq 20\)\strut
+\(\leq 10\)\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 10.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-1.86\strut
+1.79\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AF1 (\emph{i}-band)\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
 \%\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
-\(\leq 20\)\strut
+\(\leq 10\)\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 10.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-3.12\strut
+2.04\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AD1 (\emph{r}-band)\strut
@@ -380,7 +385,7 @@ mas\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 20.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-10.42\strut
+10.40\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AD1 (\emph{i}-band)\strut
@@ -391,7 +396,7 @@ mas\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 20.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-11.75\strut
+10.66\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AM2 (\emph{r}-band)\strut
@@ -400,9 +405,9 @@ mas\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
 \(\leq 10\)\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-50.0\strut
+40.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-6.13\strut
+6.15\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AM2 (\emph{i}-band)\strut
@@ -411,9 +416,9 @@ mas\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
 \(\leq 10\)\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-50.0\strut
+40.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-10.23\strut
+10.80\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AF2 (\emph{r}-band)\strut
@@ -424,7 +429,7 @@ AF2 (\emph{r}-band)\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 10.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-1.19\strut
+1.85\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AF2 (\emph{i}-band)\strut
@@ -435,7 +440,7 @@ AF2 (\emph{i}-band)\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 10.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-2.53\strut
+2.30\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AD2 (\emph{r}-band)\strut
@@ -446,7 +451,7 @@ mas\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 20.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-10.26\strut
+10.21\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 AD2 (\emph{i}-band)\strut
@@ -457,7 +462,7 @@ mas\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
 20.0\strut
 \end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-11.34\strut
+11.06\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
